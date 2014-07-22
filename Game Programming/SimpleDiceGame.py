@@ -93,9 +93,9 @@ debug = input("Type YES to enter debug mode: ").lower() == "yes"
 
 if (debug):
     "Get the debug rounds number"
+    turns = num(input("How many rounds(positive int): "))
     while (not isinstance(turns, int) or turns < 1):
-        print("Invalid input!!")
-        turns = num(input("How many rounds(positive int): "))
+        turns = num(input("Invalid input!! How many rounds(positive int): "))
     turns -= 1
 
 while (turns > 0):
