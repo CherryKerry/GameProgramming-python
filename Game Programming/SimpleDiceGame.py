@@ -90,7 +90,6 @@ turns = 0
 results = []
 humanFirst = True
 debug = input("Type YES to enter debug mode: ").lower() == "yes"
-
 if (debug):
     "Get the debug rounds number"
     turns = num(input("How many rounds(positive int): "))
@@ -98,7 +97,7 @@ if (debug):
         turns = num(input("Invalid input!! How many rounds(positive int): "))
     turns -= 1
 
-while (turns > 0):
+while (turns >= 0):
     results.append(playTurn(humanFirst))
     if (results[-1] == "Draw"): 
         print("Round was a Draw")
